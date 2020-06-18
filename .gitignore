@@ -107,3 +107,4 @@ dist
 # Ulakka project specific
 blog/tiddlers/demo
 blog/output
+*.html
