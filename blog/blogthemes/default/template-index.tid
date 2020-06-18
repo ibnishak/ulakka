@@ -1,0 +1,40 @@
+created: 20200530151609078
+list:
+modified: 20200602103233445
+tags: $:/tesseract/ulakka/themes/default $:/tags/ulakka/indexTemplate
+title: $:/tesseract/ulakka/themes/default/indexTemplate
+type: text/vnd.tiddlywiki
+
+<html>
+	<head>
+		{{$:/tesseract/ulakka/theme/meta-common}}
+		{{||$:/tesseract/ulakka/theme/meta-index}}
+		<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet"> 
+	</head>
+
+	<body id="collection">
+	<header>
+		<h1 dir="" id="blog-title"><a href="index.html" class="h-card p-author u-url">{{$:/SiteTitle}}</a></h1>
+		<p class="description p-note">{{$:/SiteSubtitle}}</p>
+		
+		<nav>
+			<$list filter="[tag[navbar]!has[draft.of]]">
+				<$link overrideClass="pinned">{{!!title}}</$link>
+			</$list>
+		</nav>	
+	</header>
+	<section id="wrapper">
+		<$list filter="[list[]]">
+			<article class="norm h-entry">
+			<h2 class="post-title" class="p-name"><$link overrideClass="u-url">{{!!title}}</$link></h2>
+			<time class="dt-published"><$view field="created" format="date" template="DDth MMM YYYY"/></time>
+			<div lang="en" dir="auto" class="book p-summary"><p>{{!!description}}</p></div>
+			<$link overrideClass="read-more">Read More...</$link>
+			</article>
+		</$list>
+	</section>
+	<nav aria-label="Page navigation" class="pagination">
+	<$macrocall $name="pagination" tot={{$:/tesseract/ulakka/indextemplate-wrapper!!totalindexpages}} cur={{$:/tesseract/ulakka/indextemplate-wrapper!!currentindexpage}}/>
+	</nav>
+	</body>
+</html>

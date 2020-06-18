@@ -1,0 +1,37 @@
+created: 20200603101035280
+modified: 20200603101050713
+tags: 
+title: $:/tesseract/ulakka/themes/meme/postTemplate
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+<html lang="en">
+   <head >
+      {{$:/tesseract/ulakka/theme/meta-common}}
+      {{||$:/tesseract/ulakka/theme/meta-post}}
+      <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet"> 
+   </head>
+   <body id="post">
+      <div id="overlay"></div>
+      <header>
+         <h1 dir="auto" id="blog-title"><a rel="author" href="index.html" class="h-card p-author">{{$:/SiteTitle}}</a></h1>
+         <nav>
+            <$list filter="[tag[navbar]!has[draft.of]]">
+				   <$link overrideClass="pinned">{{!!title}}</$link>
+			   </$list>
+         </nav>
+      </header>
+      <article id="post-body" class="norm h-entry ">
+      <h2 id="title" class="p-name dated"><$view field="title"/></h2>
+      <time class="dt-published"><$view field="created" format="date" template="DDth MMM YYYY"/></time>
+      <div class="e-content"><$view field="text"/></div>
+      <div class="post-tags-wrapper"><$list filter="[enlist{!!tags}]"><$link overrideClass="post-tags"><<currentTiddler>>&nbsp;</$link></$list></div>
+      </article>
+      <footer dir="ltr">
+         <hr>
+         <nav>
+            <p style="font-size: 0.9em">published with <a class="home pubd" href="#">ulakka</a></p>
+         </nav>
+      </footer>
+   </body>
+</html>

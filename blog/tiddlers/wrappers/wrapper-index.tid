@@ -1,0 +1,13 @@
+created: 20200531164944188
+currentindexpage: 24
+list: [[dolor sit amet]] [[ellus augue, dapibus tristique ante nec, elementum]] [[north south corridor]] [[sed suscipit nisl auctor]] [[south eastern border]] [[tristique ante necelementum suscipit]]
+modified: 20200602103313997
+tags: 
+title: $:/tesseract/ulakka/indextemplate-wrapper
+totalindexpages: 24
+type: text/vnd.tiddlywiki
+
+\define tv-wikilink-template() $uri_doubleencoded$.html
+<$set name="currentTemplate" filter="[tag{$:/tesseract/ulakka/theme/current}tag[$:/tags/ulakka/indexTemplate]]">
+<$view tiddler=<<currentTemplate>> format="htmlwikified" mode="inline"/>
+</$set>

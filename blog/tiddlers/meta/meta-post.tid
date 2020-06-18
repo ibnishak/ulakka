@@ -1,0 +1,12 @@
+created: 20200603101035280
+modified: 20200608110924220
+tags: 
+title: $:/tesseract/ulakka/theme/meta-post
+type: text/vnd.tiddlywiki
+
+<meta name="description" content={{!!description}} />
+<meta itemprop="datePublished" content={{!!created}} />
+<meta name="apple-mobile-web-app-title" content={{!!title}}/>
+<meta property="og:title" content={{!!title}} />
+<meta property="og:description" content={{!!description}} />
+<title>{{!!title}}</title>

@@ -1,0 +1,25 @@
+created: 20200603101035280
+modified: 20200603101050713
+tags: 
+title: $:/tesseract/ulakka/themes/meme/rssTemplate
+type: text/vnd.tiddlywiki
+
+\define MyFilter(MyTag,domain)
+[!is[system]!sort[created]limit[10]]
+\end
+
+`<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>`{{$:/SiteTitle}}`</title>
+    <link>http://example.com/</link>
+    <description>`{{$:/SiteSubtitle}}`</description>
+    `<$list filter="[!is[system]!tag[draft]!has[draft.of]!tag[navbar]]">`
+    <item>
+       <title>`{{!!title}}`</title>
+       <link>`<$view field="title" format="doubleurlencoded"/>`.html</link>
+       <description>`{{!!description}}`</description>
+    </item>
+    `</$list>`
+  </channel>
+</rss>`

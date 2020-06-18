@@ -1,0 +1,15 @@
+{
+  "name": "ulakka",
+  "version": "1.0.0",
+  "description": "Ulakka",
+  "main": "index.js",
+  "scripts": {
+    "load": "node node_modules/tiddlywiki/tiddlywiki.js blog --load *.html",
+    "build": "node node_modules/tiddlywiki/tiddlywiki.js blog --build"
+  },
+  "author": "Riz",
+  "license": "ISC",
+  "dependencies": {
+    "tiddlywiki": "^5.1.22"
+  }
+}

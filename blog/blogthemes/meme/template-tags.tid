@@ -1,0 +1,41 @@
+created: 20200603101035280
+modified: 20200603101050713
+tags: 
+title: $:/tesseract/ulakka/themes/meme/tagTemplate
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+<html lang="en">
+   <head >
+      {{$:/tesseract/ulakka/theme/meta-common}}
+      {{||$:/tesseract/ulakka/theme/meta-post}}
+      <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet"> 
+   </head>
+   <body id="post">
+      <div id="overlay"></div>
+      <header>
+         <h1 dir="auto" id="blog-title"><a rel="author" href="index.html" class="h-card p-author">{{$:/SiteTitle}}</a></h1>
+         <nav>
+            <$list filter="[tag[navbar]!has[draft.of]]">
+				   <$link overrideClass="pinned">{{!!title}}</$link>
+			   </$list>
+         </nav>
+      </header>
+      <article id="post-body" class="norm h-entry ">
+      <h2 id="title" class="p-name dated"><<currentTiddler>></h2>
+      <div class="e-content">
+      <ul>
+         <$list filter="[tag<currentTiddler>]">
+            <li><$link><<currentTiddler>></$link></li>
+         </$list>
+      </ul>
+      </div>
+      </article>
+      <footer dir="ltr">
+         <hr>
+         <nav>
+            <p style="font-size: 0.9em">published with <a class="home pubd" href="#">ulakka</a></p>
+         </nav>
+      </footer>
+   </body>
+</html>

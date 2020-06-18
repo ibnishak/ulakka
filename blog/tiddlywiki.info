@@ -1,0 +1,70 @@
+{
+    "description": "Basic client-server edition",
+    "plugins": [
+        "tiddlywiki/tiddlyweb",
+        "tiddlywiki/filesystem",
+        "tiddlywiki/highlight"
+    ],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "tiddlywiki/snowwhite"
+    ],
+    "build": {
+        "full": [
+            "--renderblogindex",
+            "[!is[system]!tag[navbar]]",
+            "$:/tesseract/ulakka/indextemplate-wrapper",
+            "--render",
+            "[!is[system]!tag[draft]!has[draft.of]]",
+            "[encodeuricomponent[]addsuffix[.html]]",
+            "text/plain",
+            "$:/tesseract/ulakka/posttemplate-wrapper",
+            "--rendertiddler",
+            "$:/tesseract/ulakka/css-wrapper",
+            "css.css",
+            "text/plain",
+            "--render",
+            "[!is[system]!tag[draft]!has[draft.of]!tag[navbar]tags[]]",
+            "[encodeuricomponent[]addsuffix[.html]]",
+            "text/plain",
+            "$:/tesseract/ulakka/tagtemplate-wrapper",
+            "--rendertiddler",
+            "$:/tesseract/ulakka/rsstemplate-wrapper",
+            "feed.rss",
+            "text/plain",
+            "--setfield",
+            "$:/tesseract/ulakka/publishTime",
+            "text",
+            "$:/tesseract/ulakka/publishTimeTemplate",
+            ""
+        ],
+        "default": [
+            "--renderblogindex",
+            "[!is[system]!tag[navbar]]",
+            "$:/tesseract/ulakka/indextemplate-wrapper",
+            "--render",
+            "[!is[system]!tag[draft]!has[draft.of]modifiedafter{$:/tesseract/ulakka/publishTime}]",
+            "[encodeuricomponent[]addsuffix[.html]]",
+            "text/plain",
+            "$:/tesseract/ulakka/posttemplate-wrapper",
+            "--rendertiddler",
+            "$:/tesseract/ulakka/css-wrapper",
+            "css.css",
+            "text/plain",
+            "--render",
+            "[!is[system]!tag[draft]!has[draft.of]!tag[navbar]tags[]]",
+            "[encodeuricomponent[]addsuffix[.html]]",
+            "text/plain",
+            "$:/tesseract/ulakka/tagtemplate-wrapper",
+            "--rendertiddler",
+            "$:/tesseract/ulakka/rsstemplate-wrapper",
+            "feed.rss",
+            "text/plain",
+            "--setfield",
+            "$:/tesseract/ulakka/publishTime",
+            "text",
+            "$:/tesseract/ulakka/publishTimeTemplate",
+            ""
+        ]
+    }
+}

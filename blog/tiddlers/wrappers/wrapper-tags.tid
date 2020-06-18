@@ -1,0 +1,10 @@
+created: 20200608111117310
+modified: 20200608111201918
+tags: 
+title: $:/tesseract/ulakka/tagtemplate-wrapper
+type: text/vnd.tiddlywiki
+
+\define tv-wikilink-template() $uri_doubleencoded$.html
+<$set name="currentTemplate" filter="[tag{$:/tesseract/ulakka/theme/current}tag[$:/tags/ulakka/tagTemplate]]">
+<$view tiddler=<<currentTemplate>> format="htmlwikified" mode="inline"/>
+</$set>

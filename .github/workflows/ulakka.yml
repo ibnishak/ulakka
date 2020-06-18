@@ -1,0 +1,27 @@
+# This workflow will do a clean install of node dependencies, convert wikitext to html and publish the static pages to gh-pages
+
+name: Ulakka Publish
+
+on:
+  push:
+    branches: [ master ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: bahmutov/npm-install@v1
+    - run: npm run-script load
+    - run: npm run-script build
+
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: output

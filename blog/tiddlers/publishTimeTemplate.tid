@@ -1,0 +1,5 @@
+tags: 
+title: $:/tesseract/ulakka/publishTimeTemplate
+type: text/vnd.tiddlywiki
+
+<<now YYYY0MM0DD0hh0mm0ss0XXX>>
