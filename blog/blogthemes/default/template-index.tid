@@ -1,9 +1,11 @@
 created: 20200530151609078
 list:
 modified: 20200602103233445
-tags: $:/tesseract/ulakka/themes/default $:/tags/ulakka/indexTemplate
+tags: 
 title: $:/tesseract/ulakka/themes/default/indexTemplate
 type: text/vnd.tiddlywiki
+ulakka-theme: default
+ulakka-template: index
 
 <html>
 	<head>

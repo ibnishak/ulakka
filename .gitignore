@@ -108,3 +108,4 @@ dist
 blog/tiddlers/demo
 blog/output
 *.html
+blog/tiddlers/$__StoryList.tid

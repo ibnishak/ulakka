@@ -1,8 +1,10 @@
 created: 20200603101035280
 modified: 20200603101050713
-tags: $:/tesseract/ulakka/themes/default $:/tags/ulakka/tagTemplate
+tags:
 title: $:/tesseract/ulakka/themes/default/tagTemplate
 type: text/vnd.tiddlywiki
+ulakka-theme: default
+ulakka-template: tag
 
 \whitespace trim
 <html lang="en">

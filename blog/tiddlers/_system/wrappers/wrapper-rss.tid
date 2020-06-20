@@ -4,6 +4,6 @@ tags:
 title: $:/tesseract/ulakka/rsstemplate-wrapper
 type: text/vnd.tiddlywiki
 
-<$set name="currentTemplate" filter="[tag{$:/tesseract/ulakka/theme/current}tag[$:/tags/ulakka/rssTemplate]]">
+<$set name="currentTemplate" filter="[ulakka-theme{$:/tesseract/ulakka/theme/current}ulakka-template[rss]]">
 <$view tiddler=<<currentTemplate>> format="plainwikified" mode="inline"/>
 </$set>

@@ -5,6 +5,6 @@ title: $:/tesseract/ulakka/tagtemplate-wrapper
 type: text/vnd.tiddlywiki
 
 \define tv-wikilink-template() $uri_doubleencoded$.html
-<$set name="currentTemplate" filter="[tag{$:/tesseract/ulakka/theme/current}tag[$:/tags/ulakka/tagTemplate]]">
+<$set name="currentTemplate" filter="[ulakka-theme{$:/tesseract/ulakka/theme/current}ulakka-template[tag]]">
 <$view tiddler=<<currentTemplate>> format="htmlwikified" mode="inline"/>
 </$set>
